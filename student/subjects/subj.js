@@ -1,4 +1,4 @@
-import * as stHa from "/LearnCity/storage_handler.js";
+import * as stHa from "/storage_handler.js";
 
 var url_string = window.location.href;
 var url = new URL(url_string);
