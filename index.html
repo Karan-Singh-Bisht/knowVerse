@@ -57,7 +57,7 @@
           <h1>Your</h1>
       </div>
       <div class="line">
-          <h1>Web Experience</h1>
+          <h1>Learning journey</h1>
       </div>
       <div class="line">
           <h1>is loading right</h1>
@@ -103,7 +103,7 @@
   <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-#000 text-light">
     <h2 style="text-align: center">Here you can find the Learn City demos for teachers and students.</h2>
     <h5>The two demos are connected to each other.
-      This means that any changes you make in the teacher demo will also appear in the student demo. Have fun trying them out! :)
+      This means that any changes you make in the teacher section will also appear in the student section. Have fun trying them out! 
     <br>
     </h5>
   </div>
@@ -111,38 +111,43 @@
   <div id="content">
     <div class="represent-div">
       <div id="student-sec">
-        <h2 class="display-5">Students Demo</h2>
-        <p class="lead">Discover Learn City from a student's point of view.</p>
+        <h2 class="display-5 text-light">Students Section</h2>
+        <p class="lead text-light">Discover Learn City from a student's point of view.</p>
         <a class="btn btn-outline-light stdb-btn" href="student" onclick="window.open(this.href, 'mywin',
-          'left='+((screen.width/2)-540)+',top='+((screen.height/2)-384)+',width=1080,height=768,toolbar=0,resizable=0'); return false;" >Start Demo</a><br>
-        <a id='studentCount'>Already started [loading...] times. :)</a>
+          'left='+((screen.width/2)-540)+',top='+((screen.height/2)-384)+',width=1080,height=768,toolbar=0,resizable=0'); return false;" >Start</a><br>
+        <!-- <a id='studentCount'>Already started [loading...] times. :)</a> -->
       </div>
-      <div class="charimg"></div>
+      <div id="charimg">
+        <img src="img/landing/students.png">
+      </div>
     </div>
     <div class="represent-div">
-      <div id="teacher-sec"></div>
-      <div class="charimg"></div>
+      <div id="teacher-sec">
+        <h2 class="display-5 text-light">Teacher Section</h2>
+        <p class="lead text-light">Discover the backend for the teacher.</p>
+        <a class="btn btn-outline-secondary stdb-btn" href="teacher" onclick="window.open(this.href, 'mywin',
+          'left=0,top=0,width='+screen.width+',height='+screen.height+',toolbar=0,resizable=0, menubar=0, location=no'); return false;">Start</a><br>
+        <!-- <a id='teacherCount'>Already started [loading...] times. :)</a> -->
+      </div>
+      <div id="charimg2">
+        <img src="img/landing/teacher.png">
+      </div>
     </div>
   </div>
-<!-- <footer class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md">
-      <h1>knowVerse</h1>
-      <small class="d-block mb-3 text-muted">&copy; 2024</small>
-    </div>
-    <div class="col-6 col-md">
-      <h5>About</h5>
-      <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="#">knowVerse</a></li>
-        <li><a class="link-secondary" href="team.html">Team</a></li>
-        <li><a class="link-secondary" href="learncity.html">What is Learn City?</a></li> -->
-        <!-- <li><a class="link-secondary" href="https://github.com/EinGuterWaran/LearnCity">GitHub</a></li> -->
-        <!-- <li><a class="link-secondary" href="https://devpost.com/software/learn-city">Devpost</a></li> -->
-
-      <!-- </ul>
-    </div>
+<footer>
+  <div class="footer">
+    <h1>knowVerse</h1>
+    <small>&copy; 2024</small>
   </div>
-</footer> -->
+  <div class="end">
+    <h5>About</h5>
+    <ul>
+      <li><a href="#">knowVerse</a><li>
+      <li><a href="team">Team</a></li>
+      <li><a href="learncity.html">What is knowVerse?</a></li>
+    </ul>
+  </div>
+</footer>
 <!-- <script src="css/bootstrap.bundle.min.js"></script> -->
   <script>
     var studentC = document.getElementById('studentCount');
@@ -162,13 +167,13 @@
             .then(count => teacherC.innerText = "Already started "+count+" times. :)");    
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!-- Three.js is needed for 3d Effects -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
   <!-- ControlKit is needed for Debug Panel -->
   <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
   <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-  <!-- <script src="app.js"></script> -->
+  <script src="app.js"></script>
 </main>
 </body>
 </html>

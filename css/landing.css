@@ -16,7 +16,7 @@ main{
 #loader{
   height: 100%;
   width: 100%;
-  z-index: -1;
+  z-index: 100;
   position: fixed;
   background-color: black;
   padding: 25vh 10vw;
@@ -175,7 +175,7 @@ main{
 #content{
   height: 100vh;
   width: 100%;
-  background-color: red;
+  background-color: black;
   position: relative;
   display: flex;
   align-items: start;
@@ -184,22 +184,114 @@ main{
 }
 
 .represent-div{
-  height: 70vh;
-  width: 40%;
+  height: 90vh;
+  width: 35%;
   position: relative;
   padding: 2vw;
-  background-color: white;
+  background-color: rgba(36, 33, 33, 0.548);
 }
 
 #student-sec{
   text-align: center;
-  background-color: white;
+  background-color: rgba(36, 33, 33, 0.548);
 }
 
 .stdb-btn{
-  background-color: black !important;
+  /* background-color: black !important;
   margin-bottom: 1vw;
+  color: white; */
+  margin: 1vw;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid cyan;
+  color: cyan;
+  font-weight: 600;
+  position: relative;
+  transition: all linear 0.5s;
+  overflow: hidden;
 }
+ 
+.stdb-btn::after{
+    content: "";
+    height: 50px;
+    width: 50px;
+    background-color: cyan;
+    position: absolute;
+    top: 50%;   /*next 3 propertoes are center setting properties.*/
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: all linear 0.5s;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.stdb-btn:hover::after{
+    transform: translate(-50%,-50%) scale(3);
+    color: white;
+}   
+
+.stdb-btn:hover{
+    cursor: pointer;
+    color: black;
+}
+
+#charimg{
+  height: 70%;
+  width: 100%;
+  padding: 2vw;
+}
+
+#charimg img{
+  margin-top: 2.5vw;
+  height: 90%;
+  width: 100%;
+}
+
+#teacher-sec{
+  text-align: center;
+  background-color: rgba(36, 33, 33, 0.548);
+}
+
+#charimg2{
+  height: 70%;
+  width: 100%;
+}
+
+#charimg2 img{
+  height: 100%;
+  width: 100%;
+}
+
+footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: #e5e5e5;
+}
+
+.end{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.end li a{
+  text-decoration: none;
+  color: white;
+}
+.end h5{
+  color: white;
+}
+
+
+
+
   /*
    * Custom translucent site header
    */
