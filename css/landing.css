@@ -1,12 +1,210 @@
-.container {
-    max-width: 960px;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,html{
+  height: 100%;
+  width: 100%;
+}
+
+main{
+  background-color: black;
+}
+
+#loader{
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  background-color: black;
+  padding: 25vh 10vw;
+  color: white;
+}
+
+.line{
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1vw;
+}
+
+.line h1{
+  font-size: 6vw;
+  font-family: sans-serif;
+}
+
+#line1-part1{
+  display: flex;
+  width: 11vw;
+  gap: 0.5vw;
+}
+
+#line1-part1 h5, #line1-part1 h6{
+  font-size: 2.5vw;
+  font-family: "silk serif";
+  font-weight: 100;
+}
+
+#line1-part1 h5{
+  width: 3.8vw;
+}
+
+.line h2{
+  font-size: 5.5vw;
+  font-family: "silk serif";
+  opacity: 0;
+  animation-duration: 2.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes anime {
+  0%{
+      font-family: "Plain Light";
+      -webkit-text-stroke: 1px #fff;
+      color: #fff;
+      opacity: 1;
   }
-  
+  47%{
+      font-family: "Plain Light";
+      -webkit-text-stroke: 1px #fff;
+      color: #fff;
+      opacity: 0;
+  }
+  50%{
+      font-family: "silk serif";
+      -webkit-text-stroke: 1px #fff;
+      color: transparent;
+      opacity: 1;
+  }
+  100%{
+      font-family: "silk serif";
+      -webkit-text-stroke: 1px #fff;
+      color: transparent;
+      opacity: 0;
+  }
+}
+
+.site-header{
+  background-color: black !important;
+  height: 10vh;
+}
+
+#extra{
+  width: 20vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "Madimi One", sans-serif;
+  font-weight: 100 !important;
+  font-style: normal;  
+}
+
+.container {
+    margin-top: 1.32vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container a{
+  text-decoration: none;
+  color: white;
+}
+
+#heading{
+  font-size: 2vw;
+  font-family: "Madimi One", sans-serif;
+}
+
+#page-1-heading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{
+  font-size: 12vw;
+  text-align: left;
+  width: 100vw;
+  height: fit-content;
+  color: white;
+}
+
+#video-content{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5vw;
+}
+
+.tag-line{
+  color: #eee3e394;
+  font-size: 2vw;
+}
+
+.desc{
+  background-color: black;
+}
+
+.card{
+  width: 20% !important;
+}
+
+.image-div{
+  height: 50%;
+  width: 50%;
+  background-color: red;
+}
+
+.image-div img{
+  height: 20%;
+  width: 50%;
+  object-fit: cover;
+  object-position: top;
+}
+
+#content{
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: space-around;
+  padding: 2vw;
+}
+
+.represent-div{
+  height: 70vh;
+  width: 40%;
+  position: relative;
+  padding: 2vw;
+  background-color: white;
+}
+
+#student-sec{
+  text-align: center;
+  background-color: white;
+}
+
+.stdb-btn{
+  background-color: black !important;
+  margin-bottom: 1vw;
+}
   /*
    * Custom translucent site header
    */
   
-  .site-header {
+  /* .site-header {
     background-color: rgba(0, 0, 0, .85);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
@@ -18,7 +216,7 @@
   .site-header a:hover {
     color: #fff;
     text-decoration: none;
-  }
+  } */
   
   /*
    * Dummy devices (replace them with your own or something else entirely!)
